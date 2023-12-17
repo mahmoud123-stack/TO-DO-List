@@ -1,0 +1,197 @@
+:root {
+    --main-color: #337cff;
+    --font-Awesome: "Font Awesome 5 Free";
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding-top: 30px;
+}
+
+header h1 {
+    font-size: 75px;
+    color: #0bc5ea;
+    font-family: 'Yellowtail', cursive;
+}
+
+header p {
+    font-size: 18px;
+    color: #fbb6ce;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.TO-DO {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+    padding-top: 35px;
+    width: 60%;
+    margin: auto;
+    background-color: #edfdfd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #a5f6f6;
+}
+
+.TO-DO>.form {
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+}
+
+.TO-DO>.form>.input {
+    flex-grow: 3;
+    padding: 8px;
+    outline: none;
+    border:2px solid #a5f6f6;
+    border-radius: 10px;
+    height: 55px;
+    caret-color: #0bc5ea;
+    font-size: 20px;
+}
+
+.TO-DO>.form>.add {
+    flex-grow: 1;
+    color: white;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fbb6ce;
+    cursor: pointer;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.TO-DO>.form>.add:hover {
+    background-color: #fbb6cee4;
+}
+
+.TO-DO>.tasks {
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.TO-DO>.tasks>.Task {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #c4f1f9;
+    transition: .5s;
+    box-shadow: 0px 1px 8px 3px rgb(0 0 0 / 10%);
+}
+
+.TO-DO>.tasks>.Task>.Content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 2;
+    margin-left: 35px;
+}
+
+.TO-DO>.tasks>.Task>.Content>.TaskHeading {
+    margin-bottom: 0;
+    flex: 1;
+    word-break: break-all;
+    color: #00b5d8;
+}
+
+.TO-DO>.tasks>.Task.done {
+    opacity: 0.4;
+}
+
+.TO-DO>.tasks>.Task>i.Finish {
+    position: absolute;
+    left: 20px;
+    font-size: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fbb6ce;
+}
+
+
+.TO-DO>.tasks>.Task>i.delete,
+.TO-DO>.tasks>.Task>i.Update {
+    color: white;
+    background-color: #fbb6ce;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 6px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.TO-DO>.tasks>.Task>i.delete {
+    margin-right: 5px;
+}
+
+@media (max-width:767px) {
+    header {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    header h1 {
+        font-size: 55px;
+    }
+
+    .TO-DO {
+        padding: 20px 2px;
+        padding-top: 35px;
+        width: 100%;
+    }
+
+    .TO-DO>.form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .TO-DO>.tasks {
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .TO-DO {
+        width: 80%;
+    }
+
+    .TO-DO>.form {
+        width: 90%;
+    }
+
+}
+
+@media (min-width:992px) {
+    .TO-DO {
+        width: 60%;
+    }
+
+    .TO-DO>.form {
+        width: 90%;
+    }
+
+}
